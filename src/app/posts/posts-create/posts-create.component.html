@@ -1,0 +1,13 @@
+<h2>Post Create Component</h2>
+<!--#postInput is  local Reference [value]=is a property on textarea HTMLElement-->
+<textarea cols="30" rows="10" [value]="newPost" #postInput></textarea>
+<br/>
+<button (click)="onAddPost(postInput)">Save Button</button>
+<p>{{ newPost }}</p>
+
+
+<!--Two way binding using ngModel,same is part of FormsModule @angular/forms-->
+<textarea cols="30" rows="10" [(ngModel)]="enteredValue"></textarea>
+<br/>
+<button (click)="onAddPostTwoWayBinding()">Save Button</button>
+<p>{{ newPostTwoWay }}</p>
